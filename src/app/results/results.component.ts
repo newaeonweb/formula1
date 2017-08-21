@@ -14,10 +14,9 @@ export class ResultsComponent implements OnInit {
 
   ngOnInit() {
     this.result = this.resultsService.getData().subscribe(data => {
-      //   // Read the result field from the JSON response.
-        this.result = data['MRData'];
+       this.result = data['MRData'];
         console.log(this.result);
-      });
+    });
 
 
     // this.http.get('http://ergast.com/api/f1/2015/driverStandings.json').subscribe(data => {
