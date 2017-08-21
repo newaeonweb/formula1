@@ -1,12 +1,19 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import 'rxjs/add/operator/map'
 
 @Injectable()
 export class ResultsService {
+  private result: any = [];
+  private url: string;
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
-  getData(){
-    return [1,2,3,4]
+  getData() {
+    this.url = 'http://ergast.com/api/f1/2015/driverStandings.json';
+
+    return this.http.get(this.url);
+
   }
 
 }
