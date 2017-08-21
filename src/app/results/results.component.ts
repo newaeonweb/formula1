@@ -14,7 +14,7 @@ export class ResultsComponent implements OnInit {
 
   ngOnInit(): void {
     this.resultsService.getData().subscribe(data => {
-       this.result = data['MRData'];
+       this.result = data['MRData']['StandingsTable']['StandingsLists'][0]['DriverStandings'];
         console.log(this.result);
     }, err => {
       console.log('Something went wrong!' + JSON.stringify(err));

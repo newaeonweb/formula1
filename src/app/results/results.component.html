@@ -1,3 +1,19 @@
 <p>
   results works!
 </p>
+
+<div class="row">
+  <div class="col-md-3" *ngFor="let item of result">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">{{ item.Driver.familyName}}, {{item.Driver.givenName}}</h4>
+        <h6 class="card-subtitle mb-2 text-muted">Points: {{item.points}} | Season: {{item.season}}</h6>
+        <p class="card-text">Wins: {{item.wins}}</p>
+        <a href="#" class="card-link">Results</a>
+        <a href="#" class="card-link">Winners</a>
+      </div>
+    </div>
+    <br>
+  </div>
+</div>
+
