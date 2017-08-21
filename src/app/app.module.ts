@@ -10,15 +10,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { ResultsComponent } from './results/results.component';
 import { WinnersComponent } from './winners/winners.component';
 import { PageNotFoundComponent } from './not-found/not-found.component';
+import { HomeService } from './home/home.service';
 import { ResultsService } from './results/results.service';
 import { WinnersService } from './winners/winners.service';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ResultsComponent,
     WinnersComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +29,7 @@ import { WinnersService } from './winners/winners.service';
     NgbModule.forRoot(),
     AppRoutingModule
   ],
-  providers: [ResultsService, WinnersService],
+  providers: [HomeService, ResultsService, WinnersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
