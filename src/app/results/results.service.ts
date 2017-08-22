@@ -7,8 +7,8 @@ export class ResultsService {
 
   constructor(private http: HttpClient) { }
 
-  getData() {
-    this.url = 'http://ergast.com/api/f1/2015/driverStandings.json';
+  getData(year) {
+    this.url = 'http://ergast.com/api/f1/' + year +'/driverStandings.json';
 
     return this.http.get(this.url);
 

@@ -9,7 +9,7 @@ import { PageNotFoundComponent } from './not-found/not-found.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'results/:year', component: ResultsComponent },
+  { path: 'results', component: ResultsComponent },
   { path: 'winners', component: WinnersComponent },
   //{ path: '',   redirectTo: '/results', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }

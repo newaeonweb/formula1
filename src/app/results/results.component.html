@@ -1,8 +1,17 @@
-<p>
-  results works!
-</p>
-
-<div class="row">
+<h3>Season: {{selectedYear}}</h3>
+<form #resultForm="ngForm">
+  <div class="form-group">
+    <label for="year">Choose another season</label>
+    <select id="year" name="year" class="form-control" [(ngModel)]="selectedYear" (ngModelChange)="updateYear(selectedYear)">
+      <option *ngFor="let year of years" [value]="year">{{ year }}</option>
+    </select>
+  </div>
+</form>
+<br>
+<div *ngIf="isLoading">
+  Loading Data...
+</div>
+<div class="row" *ngIf="!isLoading">
   <div class="col-md-3" *ngFor="let item of result">
     <div class="card">
       <div class="card-body">
