@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
       let year = years[i];
 
       this.homeService.getData(year).subscribe(data => {
-        this.champions.push(data['MRData']['StandingsTable']['StandingsLists'][0]['DriverStandings'][0]);
+        this.champions.push(data['MRData']['StandingsTable']['StandingsLists'][0]);
         console.log(this.champions);
       }, err => {
         console.log('Something went wrong!' + JSON.stringify(err));
