@@ -29,7 +29,7 @@ export class ResultsComponent implements OnInit {
     // Get another list based on year
     this.resultsService.getData(year).subscribe(data => {
       this.isLoading = false;
-      this.result = data['MRData']['StandingsTable']['StandingsLists'][0]['DriverStandings'];
+      this.result = data['MRData']['RaceTable']['Races'];
       console.log(this.result);
     }, err => {
       this.isLoading = false;
@@ -56,7 +56,7 @@ export class ResultsComponent implements OnInit {
 
     this.resultsService.getData(this.selectedYear).subscribe(data => {
       this.isLoading = false;
-       this.result = data['MRData']['StandingsTable']['StandingsLists'][0]['DriverStandings'];
+       this.result = data['MRData']['RaceTable']['Races'];
         console.log(this.result);
     }, err => {
       this.isLoading = false;
