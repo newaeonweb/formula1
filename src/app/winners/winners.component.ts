@@ -5,9 +5,9 @@ import { ActivatedRoute, Router} from '@angular/router';
 import { WinnersService } from './winners.service';
 
 @Component({
-  selector: "app-winners",
-  templateUrl: "./winners.component.html",
-  styleUrls: ["./winners.component.css"]
+  selector: 'app-winners',
+  templateUrl: './winners.component.html',
+  styleUrls: ['./winners.component.css']
 })
 export class WinnersComponent implements OnInit {
   public result: any;
@@ -16,19 +16,19 @@ export class WinnersComponent implements OnInit {
   public sub: any;
 
   years = [
-    "2005",
-    "2006",
-    "2007",
-    "2008",
-    "2009",
-    "2010",
-    "2011",
-    "2012",
-    "2013",
-    "2014",
-    "2015"
+    '2005',
+    '2006',
+    '2007',
+    '2008',
+    '2009',
+    '2010',
+    '2011',
+    '2012',
+    '2013',
+    '2014',
+    '2015'
   ];
-  selectedYear = "2015";
+  selectedYear = '2015';
   isLoading = false;
 
   constructor(
@@ -42,17 +42,17 @@ export class WinnersComponent implements OnInit {
     console.log(year);
     this.isLoading = true;
     // Trick to update URL
-    this.router.navigate(["/winners/" + year]);
+    this.router.navigate(['/winners/' + year]);
     // Get another list based on year
     this.winnersService.getData(year).subscribe(
       data => {
         this.isLoading = false;
-        this.result = data["MRData"]["StandingsTable"]["StandingsLists"];
+        this.result = data['MRData']['StandingsTable']['StandingsLists'];
         console.log(this.result);
       },
       err => {
         this.isLoading = false;
-        console.log("Something went wrong!" + JSON.stringify(err));
+        console.log('Something went wrong!' + JSON.stringify(err));
       }
     );
   }
@@ -62,7 +62,7 @@ export class WinnersComponent implements OnInit {
 
     console.log(this.route.params);
 
-    this.year = this.route.snapshot.paramMap.get("year");
+    this.year = this.route.snapshot.paramMap.get('year');
 
     // this.sub = this.route.params.subscribe(params => {
     //   this.year = +params['year'];
@@ -76,12 +76,12 @@ export class WinnersComponent implements OnInit {
     this.winnersService.getData(this.selectedYear).subscribe(
       data => {
         this.isLoading = false;
-        this.result = data["MRData"]["StandingsTable"]["StandingsLists"];
+        this.result = data['MRData']['StandingsTable']['StandingsLists'];
         console.log(this.result);
       },
       err => {
         this.isLoading = false;
-        console.log("Something went wrong!" + JSON.stringify(err));
+        console.log('Something went wrong!' + JSON.stringify(err));
       }
     );
   }
