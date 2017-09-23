@@ -8,7 +8,7 @@ export class ResultsService {
   constructor(private http: HttpClient) { }
 
   getData(year) {
-    this.url = 'http://ergast.com/api/f1/' + year +'/results.json?limit=400&offset=0';
+    this.url = 'http://ergast.com/api/f1/' + year + '/results.json?limit=400&offset=0';
 
     return this.http.get(this.url);
 
