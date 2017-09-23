@@ -21,7 +21,7 @@
         <h6 class="card-subtitle mb-2 text-muted">Points: {{champ.DriverStandings[0].points}} | <span class="text-right">Season: {{ champ.season }} </span></h6>
         <p class="card-text">Wins: {{champ.DriverStandings[0].wins}}</p>
         <a routerLink="/results/{{champ.season}}" placement="top" ngbTooltip="See Results per Season" class="card-link">Results</a>
-        <a routerLink="/winners" placement="top" ngbTooltip="See all Winners" class="card-link">Winners</a>
+        <a routerLink="/winners/{{champ.season}}" placement="top" ngbTooltip="See all Winners" class="card-link">Winners</a>
       </div>
     </div>
     <br>
