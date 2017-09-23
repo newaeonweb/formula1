@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { ActivatedRoute, Router}   from '@angular/router';
+import { ActivatedRoute, Router} from '@angular/router';
 
-import { ResultsService } from "./results.service";
+import { ResultsService } from './results.service';
 
 @Component({
   selector: 'app-results',
@@ -25,7 +25,7 @@ export class ResultsComponent implements OnInit {
     console.log(year);
     this.isLoading = true;
     // Trick to update URL
-    this.router.navigate(["/results/" + year]);
+    this.router.navigate(['/results/' + year]);
     // Get another list based on year
     this.resultsService.getData(year).subscribe(data => {
       this.isLoading = false;
@@ -49,7 +49,7 @@ export class ResultsComponent implements OnInit {
     //   console.log(this.year);
     // });
 
-    if(this.year) {
+    if (this.year) {
       this.selectedYear = this.year;
     }
 
