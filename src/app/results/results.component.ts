@@ -11,7 +11,7 @@ import { ResultsService } from "./results.service";
 })
 export class ResultsComponent implements OnInit {
   public result: any;
-  //public route: any;
+  // public route: any;
   public year: any;
   public sub: any;
 
