@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { WinnersService } from "./winners.service";
+import { WinnersService } from './winners.service';
 
 @Component({
   selector: 'app-winners',
