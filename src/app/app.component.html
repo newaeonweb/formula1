@@ -1,7 +1,22 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<nav>
-  <a routerLink="/winners" routerLinkActive="active">Winners</a>
-  <a routerLink="/results/2015" routerLinkActive="active">Results</a>
-  <a routerLink="/" routerLinkActive="active">Home</a>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+  <a class="navbar-brand" routerLink="/" routerLinkActive="active">Formula 1</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/winners" routerLinkActive="active">Winners </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/results/2015" routerLinkActive="active">Results</a>
+      </li>
+    </ul>
+  </div>
 </nav>
-<router-outlet></router-outlet>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+
