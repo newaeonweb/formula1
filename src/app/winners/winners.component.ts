@@ -29,6 +29,7 @@ export class WinnersComponent implements OnInit {
     '2015'
   ];
   selectedYear = '2015';
+  round = '';
   isLoading = false;
 
   constructor(
@@ -48,6 +49,7 @@ export class WinnersComponent implements OnInit {
       data => {
         this.isLoading = false;
         this.result = data['MRData']['StandingsTable']['StandingsLists'];
+        this.round = this.result[0].round;
         console.log(this.result);
       },
       err => {
@@ -77,6 +79,7 @@ export class WinnersComponent implements OnInit {
       data => {
         this.isLoading = false;
         this.result = data['MRData']['StandingsTable']['StandingsLists'];
+        this.round = this.result[0].round;
         console.log(this.result);
       },
       err => {
