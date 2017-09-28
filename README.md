@@ -33,4 +33,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Published
 
-Got to: [this is note a good name](http://cute-cows.surge.sh) and see the result of this POC.
+Got to: [this is not a good name](http://cute-cows.surge.sh) and see the result of this POC.
+
+_published with surge_
